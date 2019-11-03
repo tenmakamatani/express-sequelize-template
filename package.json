@@ -3,5 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "tenmakamatani <tenma_18n1102540@nnn.ed.jp>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet": "^3.21.2"
+  }
 }
