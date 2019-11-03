@@ -3,5 +3,5 @@
         "src",
         "index.js"
     ],
-    "exec": "node index.js"
+    "exec": "babel-node index.js"
 }

@@ -4,6 +4,9 @@
   "main": "index.js",
   "author": "tenmakamatani <tenma_18n1102540@nnn.ed.jp>",
   "license": "MIT",
+  "scripts": {
+      "dev": "nodemon -L"
+  },
   "dependencies": {
     "body-parser": "^1.19.0",
     "cookie-parser": "^1.4.4",
@@ -13,6 +16,8 @@
     "nodemon": "^1.19.4"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "eslint": "^6.6.0",
     "eslint-config-prettier": "^6.5.0",
     "eslint-plugin-node": "^10.0.0",
