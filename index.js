@@ -17,6 +17,10 @@ app.use(cors());
 app.use(helmet());
 app.use(Express.static(path.join(__dirname, 'public')));
 
+// Routes settings
+import router from './src/routes';
+app.use('/', router);
+
 app.get('/', (req, res) => {
   res.send('ok');
 });
