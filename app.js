@@ -19,6 +19,10 @@ app.use(cors());
 app.use(helmet());
 app.use(Express.static(path.join(__dirname, 'public')));
 
+// Models settings
+import User from './src/models/User';
+User.sync();
+
 // Routes settings
 import router from './src/routes';
 app.use('/', router);

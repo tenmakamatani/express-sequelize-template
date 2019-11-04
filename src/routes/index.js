@@ -1,11 +1,13 @@
 'use strict';
 
 import { Router } from 'express';
-
 const router = Router();
 
-router.get('/test', (req, res) => {
-  res.send('test ok');
+import User from '../models/User';
+
+router.get('/test', async (req, res) => {
+  const users = User.findAll();
+  res.send(users);
 });
 
 export default router;
