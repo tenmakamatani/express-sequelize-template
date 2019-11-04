@@ -21,7 +21,12 @@ app.use(Express.static(path.join(__dirname, 'public')));
 
 // Models settings
 import User from './src/models/User';
-User.sync();
+import Event from './src/models/Event';
+(async () => {
+  await User.sync();
+  Event.belongsTo(User, { foreignKey: 'id' });
+  await Event.sync();
+})();
 
 // Routes settings
 import router from './src/routes';
