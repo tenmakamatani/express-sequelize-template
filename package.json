@@ -5,7 +5,7 @@
   "author": "tenmakamatani <tenma_18n1102540@nnn.ed.jp>",
   "license": "MIT",
   "scripts": {
-      "dev": "nodemon -L"
+    "dev": "nodemon -L"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -13,7 +13,9 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "helmet": "^3.21.2",
-    "nodemon": "^1.19.4"
+    "mysql2": "^2.0.0",
+    "nodemon": "^1.19.4",
+    "sequelize": "^5.21.2"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

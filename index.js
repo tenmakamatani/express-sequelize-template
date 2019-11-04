@@ -1,3 +1,5 @@
+'use strict';
+
 // Import modules
 import Express from 'express';
 import bodyParser from 'body-parser';
