@@ -8,4 +8,6 @@ import UserController from '../controllers/UserController';
 
 router.get('/:id([0-9]+)', UserController.getOneById);
 
+router.put('/:id([0-9]+)', UserController.putOneById);
+
 export default router;
