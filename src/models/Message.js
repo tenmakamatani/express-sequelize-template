@@ -9,6 +9,7 @@ const Message = sequelize.define(
     id: {
       type: Sequelize.INTEGER,
       primaryKey: true,
+      autoIncrement: true,
       allowNull: false,
     },
     from: {
@@ -23,9 +24,13 @@ const Message = sequelize.define(
       type: Sequelize.STRING,
       allowNull: false,
     },
-    createdAt: {
+    craetedAt: {
       type: Sequelize.DATE,
-      allowNull: false,
+      defaultValue: new Date(),
+    },
+    updatedAt: {
+      type: Sequelize.DATE,
+      defaultValue: new Date(),
     },
   },
   {

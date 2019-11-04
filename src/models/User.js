@@ -9,6 +9,7 @@ const User = sequelize.define(
     id: {
       type: Sequelize.INTEGER,
       primaryKey: true,
+      autoIncrement: true,
       allowNull: false,
     },
     name: {
@@ -19,9 +20,18 @@ const User = sequelize.define(
       type: Sequelize.STRING,
       allowNull: false,
     },
+    craetedAt: {
+      type: Sequelize.DATE,
+      defaultValue: new Date(),
+    },
+    updatedAt: {
+      type: Sequelize.DATE,
+      defaultValue: new Date(),
+    },
   },
   {
     freezeTableName: true,
+    timestamps: false,
   }
 );
 

@@ -9,6 +9,7 @@ const Event = sequelize.define(
     id: {
       type: Sequelize.INTEGER,
       primaryKey: true,
+      autoIncrement: true,
       allowNull: false,
     },
     lat: {
@@ -19,20 +20,29 @@ const Event = sequelize.define(
       type: Sequelize.FLOAT,
       allowNull: false,
     },
-    expired_time: {
+    expiredAt: {
       type: Sequelize.DATE,
       allowNull: false,
     },
-    user_id: {
+    userId: {
       type: Sequelize.INTEGER,
       allowNull: false,
+    },
+    craetedAt: {
+      type: Sequelize.DATE,
+      defaultValue: new Date(),
+    },
+    updatedAt: {
+      type: Sequelize.DATE,
+      defaultValue: new Date(),
     },
   },
   {
     freezeTableName: true,
+    timestamps: false,
     indexes: [
       {
-        fields: ['user_id'],
+        fields: ['userId'],
       },
     ],
   }
